@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1f0f0f;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.card {
+    background-color: #cb6c6c;
+    border: 1px solid #150c0c;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" onclick="showDetails(1)">info Card 1</div>
+        <div class="card" onclick="showDetails(2)">info Card 2</div>
+        <div class="card" onclick="showDetails(3)">info Card 3</div>
+        <div class="card" onclick="showDetails(4)">info Card 4</div>
+        <div class="card" onclick="showDetails(5)">info Card 5</div>
+        <div class="card" onclick="showDetails(6)">info Card 6</div>
+        <div class="card" onclick="showDetails(7)">info Card 7</div>
+        <div class="card" onclick="showDetails(8)">info Card 8</div>
+        <div class="card" onclick="showDetails(9)">info Card 9</div>
+        <div class="card" onclick="showDetails(10)">info Card 10</div>
+        <div class="card" onclick="showDetails(11)">info Card 11</div>
+        <div class="card" onclick="showDetails(12)">info Card 12</div>
+    </div>
+
+    <script>
+        function showDetails(cardNumber) {
+    window.location.href = `details.html?card=${cardNumber}`;
+}
+    </script> 
+</body>
+</html>
